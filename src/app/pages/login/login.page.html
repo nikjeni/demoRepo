@@ -1,0 +1,42 @@
+<!-- -->
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h2 ion-text class="text-primary">
+        <strong>Login Form</strong>
+      </h2>
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form" [formGroup]="loginForm" novalidate>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Password
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <div class="loginBtn">
+        <ion-button [disabled]="!loginForm.valid" color="primary" (click)="loginFormMethod()">SIGN IN</ion-button>
+      </div>
+    </form>
+
+    <p text-center ion-text color="secondary" tappable (click)="resetPassword()"><a>Forgot Password?</a>
+    </p>
+
+    <div>
+    </div>
+
+  </div>
+</ion-content>

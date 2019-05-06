@@ -1,5 +1,7 @@
 {
   "name": "govt-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

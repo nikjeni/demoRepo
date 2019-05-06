@@ -1,0 +1,34 @@
+<!-- -->
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h2 ion-text class="text-primary">
+        <strong>Create Form</strong>
+      </h2>
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form" [formGroup]="registrationForm" novalidate>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="image" item-start class="text-primary"></ion-icon>
+          Image
+        </ion-label>
+        <ion-input type="text" formControlName="image"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+
+      <div class="loginBtn">
+        <ion-button color="primary" (click)="registration()">Create Form</ion-button>
+      </div>
+    </form>
+
+  </div>
+</ion-content>
